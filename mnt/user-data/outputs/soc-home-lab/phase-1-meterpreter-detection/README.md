@@ -8,9 +8,9 @@ Each round changes **one variable** while holding the others constant, isolating
 
 | Round | Delivery Method | C2 Port | Parent Process | MotW Applied? |
 |---|---|---|---|---|
-| 1 | Browser download (msedge.exe) | 4444 | msedge.exe | ✅ Yes (ZoneId=3) |
-| 2 | PowerShell `Invoke-WebRequest` | 4444 | explorer.exe | ❌ No |
-| 3 | PowerShell `Invoke-WebRequest` | 8443 | explorer.exe | ❌ No |
+| 1 | Browser download (msedge.exe) | 4444 | msedge.exe |  Yes (ZoneId=3) |
+| 2 | PowerShell `Invoke-WebRequest` | 4444 | explorer.exe |  No |
+| 3 | PowerShell `Invoke-WebRequest` | 8443 | explorer.exe |  No |
 
 ## Lab Notes (Chronological)
 
