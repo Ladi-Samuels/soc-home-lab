@@ -48,7 +48,7 @@ Windows 11 on UTM runs on Apple Silicon (ARM architecture).
 
 ## Future Improvements
 
-- Add Sysmon ✅ (resolved)
+- Add Sysmon  (resolved)
 - Add Wazuh (Phase 2)
 - Improve endpoint telemetry visibility
 - Create alerting for scan behavior
