@@ -1,6 +1,6 @@
 # Phase 2 — Wazuh Integration
 
-🚧 **In Progress**
+ **In Progress**
 
 ## Goal
 
