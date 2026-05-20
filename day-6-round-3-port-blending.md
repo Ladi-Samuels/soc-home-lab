@@ -60,10 +60,10 @@ Since the port itself cannot be blocked without breaking legitimate services, de
 | Delivery | Browser (msedge.exe) | PowerShell IWR | PowerShell IWR |
 | Parent process | msedge.exe | explorer.exe | explorer.exe |
 | C2 Port | 4444 (flagged) | 4444 (same) | **8443 (blending)** |
-| MotW present | ✅ Yes | ❌ No | ❌ No |
-| Event ID 22 (DNS) | ✅ Yes | ❌ No | ❌ No |
-| Event ID 15 (MotW) | ✅ Yes | ❌ No | ❌ No |
-| Event ID 12 (Registry obj) | ✅ Yes | ❌ No | ❌ No |
+| MotW present |  Yes |  No |  No |
+| Event ID 22 (DNS) |  Yes |  No |  No |
+| Event ID 15 (MotW) |  Yes |  No |  No |
+| Event ID 12 (Registry obj) |  Yes |  No |  No |
 
 ## Sysmon Event IDs — Consistent Across All Three Rounds
 
