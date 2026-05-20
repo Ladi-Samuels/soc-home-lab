@@ -26,9 +26,9 @@ The original plan was to deliver the payload via an SMB share hosted on Kali in 
 
 What made this round different from Day 4:
 
-- ❌ **Event ID 15 absent**
-- ❌ **No Mark of the Web (Zone.Identifier)**
-- ❌ Windows had no record that the file came from the internet
+- Event ID 15 absent
+- No Mark of the Web (Zone.Identifier)
+- Windows had no record that the file came from the internet
 
 PowerShell's `Invoke-WebRequest` **does not apply the Zone.Identifier alternate data stream** the way a browser does. The file lands on disk with:
 
@@ -98,4 +98,4 @@ PowerShell downloading an executable to `Downloads` with no Zone.Identifier = **
 
 ## Confidence Assessment
 
-**High.** If this were a real attack, Defender's inability to detect the payload would have given the attacker initial access, lateral movement potential, command and control, and exfiltration capability. The absence of Event ID 12 suggests the session terminated before the attacker could establish persistence — a longer dwell time would likely produce registry object creation as the attacker pivoted toward persistence mechanisms.
+**High.If this were a real attack, Defender's inability to detect the payload would have given the attacker initial access, lateral movement potential, command and control, and exfiltration capability. The absence of Event ID 12 suggests the session terminated before the attacker could establish persistence — a longer dwell time would likely produce registry object creation as the attacker pivoted toward persistence mechanisms.
