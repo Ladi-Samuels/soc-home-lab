@@ -11,7 +11,7 @@ Deploy Wazuh as a SIEM, integrate it with the existing Sysmon telemetry from Pha
 | Host | Role | OS |
 |---|---|---|
 | SOC-WAZUH-01 | Wazuh manager + indexer + dashboard | Ubuntu Server 22.04 LTS |
-| SOC-WINDOWS-02 | Wazuh agent (existing victim VM) | Windows 11 (ARM64) |
+| SOC-WINDOWS-01 (Non-Prod) | Wazuh agent (existing victim VM) | Windows 11 (ARM64) |
 | SOC-ATTACKER-01 | Attacker (existing) | Kali Linux |
 
 ## Stages

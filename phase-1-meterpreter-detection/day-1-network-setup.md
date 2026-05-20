@@ -9,7 +9,7 @@ Build the foundational lab environment: two virtual machines that can communicat
 | Host | OS | IP | RAM | CPU | Storage |
 |---|---|---|---|---|---|
 | SOC-ATTACKER-01 | Kali Linux | 192.168.65.3 | 4 GB | 2 cores | 40 GB |
-| SOC-WINDOWS-02 | Windows 11 | 192.168.65.4 | 4 GB | 2 cores | 15.1 GB |
+| SOC-WINDOWS-01 (Non-Prod) | Windows 11 | 192.168.65.4 | 4 GB | 2 cores | 15.1 GB |
 
 **Network mode:** Shared network (UTM)
 

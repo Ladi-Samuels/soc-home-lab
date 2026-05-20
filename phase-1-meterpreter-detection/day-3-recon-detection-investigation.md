@@ -7,7 +7,7 @@ Observe Windows-generated telemetry and analyze network traffic between Kali Lin
 ## Environment
 
 - **SOC-ATTACKER-01** — Kali Linux
-- **SOC-WINDOWS-02** — Windows 11
+- **SOC-WINDOWS-01 (Non-Prod)** — Windows 11
 
 ## Tools Used
 
