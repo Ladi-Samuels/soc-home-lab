@@ -8,16 +8,21 @@ A self-built security operations lab focused on detection engineering, attacker 
 **Hypervisor:** UTM
 **Network mode:** Shared network — `192.168.65.0/24`
 
-| Host | Role | IP | OS |
-|---|---|---|---|
-| SOC-ATTACKER-01 | Attacker | 192.168.65.3 | Kali Linux |
-| SOC-WINDOWS-02 | Victim | 192.168.65.4 | Windows 11 (ARM64) |
+## Lab Inventory
 
-Additional hosts (Windows 11 #2, Metasploitable) are provisioned as needed for specific labs.
+| Host | Role | IP | OS | Status |
+|---|---|---|---|---|
+| SOC-ATTACKER-01 | Attacker | 192.168.65.3 | Kali Linux | Active |
+| SOC-WINDOWS-01 (Non-Prod) | Primary victim | 192.168.65.4 | Windows 11 (ARM64) | Active — used for all Phase 1 attacks |
+| SOC-WINDOWS-02 | Secondary victim | TBD | Windows 11 (ARM64) | Provisioned, reserved for Phase 2+ |
+| SOC-WINDOWS-02-CLONE | Snapshot/revert victim | TBD | Windows 11 (ARM64) | Provisioned, reserved for detection-testing iterations |
+| Metasploitable | Linux victim | TBD | Metasploitable | Provisioned, reserved for future labs |
+
+**Why three Windows victims?** Detection engineering requires repeatable state. The Non-Prod VM is the primary target during active testing. The secondary victim and its clone are reserved for Phase 2+ scenarios — agent deployment testing, lateral-movement simulations, and snapshot-and-revert workflows when validating custom detection rules without contaminating the primary victim's telemetry.
 
 ## Phases
 
-### Phase 1 — Meterpreter Detection via Sysmon ✅ Complete
+### Phase 1 — Meterpreter Detection via Sysmon (Complete)
 
 Three rounds of Meterpreter reverse shell attacks against Windows 11, with one variable changed per round, documented end-to-end with Sysmon telemetry and MITRE ATT&CK mapping.
 
@@ -29,9 +34,9 @@ Three rounds of Meterpreter reverse shell attacks against Windows 11, with one v
 
 **Core conclusion:** Port-based detection alone is insufficient. The reliable detection signal across all three rounds is the *behavioral chain* — unsigned binary spawned by browser or PowerShell, outbound TCP connection, timestomp activity, abrupt process termination.
 
-[→ Phase 1 lab notes](./phase-1-meterpreter-detection/)
+[Phase 1 lab notes](./phase-1-meterpreter-detection/)
 
-### Phase 2 — Wazuh Integration 🚧 In Progress
+### Phase 2 — Wazuh Integration (In Progress)
 
 Deploying Wazuh as a SIEM, replaying Phase 1 attacks against it, and writing custom detection rules for the behavioral signatures identified in Phase 1.
 
@@ -39,7 +44,7 @@ Deploying Wazuh as a SIEM, replaying Phase 1 attacks against it, and writing cus
 - **Stage B:** Detection engineering — custom rules for Phase 1 attack signatures
 - **Stage C:** Full SOC simulation — alert triage and incident response documentation
 
-[→ Phase 2 lab notes](./phase-2-wazuh-integration/)
+[Phase 2 lab notes](./phase-2-wazuh-integration/)
 
 ## Tools Used
 
