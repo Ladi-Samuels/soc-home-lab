@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Sensitive — never commit these
+*.pcap
+*.pcapng
+*.evtx
+credentials.txt
+secrets.txt
+*.key
+*.pem
+
+# Payloads — never commit actual malware
+*.exe
+*.dll
+*.bin
+!*.placeholder
+
+# Scratch / drafts
+drafts/
+scratch/
+*.draft.md
